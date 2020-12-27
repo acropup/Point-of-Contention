@@ -1,0 +1,207 @@
+/* ==UserStyle==
+@name           Point of Rental Styles
+@namespace      https://www.github.com/acropup/porpoise/
+@version        1.0.6
+@description    For Rental Essentials, these style customizations improve the look and feel of PointOfRental.com. These can be used alongside or without the Poise for PoR Javascript and CSS package.
+@preprocessor   less
+@author         Shane Burgess
+==/UserStyle== */
+
+/* Recommend using Stylus browser extension to host CSS UserStyles
+  https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne */
+  
+@-moz-document domain("pointofrentalcloud.com") {
+  /* BEGIN contract view */
+  .existing-lineitems .transaction-overview-lineitem .line-item-row {
+    min-height: 40px;
+  }
+  div.field-ItemName > div.inline-edit-link > span.editable-list-item {
+    word-break: normal;
+  }
+  .title-bar-row > div {
+    max-width: unset !important;
+    padding: 5px 0px !important;
+  }
+  /* All item row cells */
+  .line-item-row > div {
+    max-width: unset !important;
+    padding: 0px !important;
+    display: flex;
+    align-items: center;
+  }
+  /* Each column */
+  .title-bar-row > div:first-child, .line-item-row > div.icon-container {
+    min-width: 80px !important;
+  }
+  .title-bar-row > div.header-ItemName, .line-item-row > div.field-ItemName {
+    min-width: 210px !important;
+    width: 100% !important;
+  }
+  .title-bar-row > div.header-ItemKey, .line-item-row > div.field-ItemKey {
+    min-width: 18em !important;
+  }
+  .title-bar-row > div.header-Rate, .line-item-row > div.field-PreDiscountedAmountPerItem {
+    min-width: 6em !important;
+  }
+  .title-bar-row > div.header-Quantity, .line-item-row > div.field-Quantity {
+    min-width: 5em !important;
+  }
+  .title-bar-row > div.header-TotalFee, .line-item-row > div.field-Amount {
+    min-width: 7em !important;
+  }
+  div.td-editable:not(.nothing) { /* :not(.nothing) gets around CSS specificity rules */
+    padding-right: 0px !important;
+  }
+  .title-bar-row, .line-item-row {
+    justify-content: flex-start !important;
+  }
+  /* Tidy the Status column for items that have gone out/been returned */
+  .field-Status > span {
+    position: absolute;
+  }
+  .field-Status > .field-StatusName {
+    top: 0;
+  }
+  .field-Status > .field-ChargedDuration {
+    bottom: 0;
+  }
+  /* Inline edit pane */
+  .existing-lineitems div.line-item-row div.inline-edit-actions.pull-right:not(.nothing) {
+    top: 0px !important;
+    left: calc(100% - 30px);
+  }
+  .existing-lineitems div.line-item-row > div.field-Quantity div.inline-edit-actions.pull-right:not(.nothing) {
+    top: 1px !important;
+  }
+  .inline-edit-input-wrapper {
+    top: 1px !important;
+    right: 3px;
+    min-width: 90px !important;
+    width: calc(100% - 30px) !important;
+  }
+  .btn-inline-save, .btn-inline-cancel {
+    height: 27px !important;
+  }
+  /* Kit indicator arrow */
+  .existing-lineitems .transaction-overview-lineitem.kit-component .line-item-row > .icon-container { 
+    background-position-y: 45%;
+  }
+  /* Overbook icon */
+  .action-btn-dismiss-overbook {
+    background-position-x: 0px !important;
+    height: 18px !important;
+    width: 18px !important;
+    padding: 0px !important;
+  }
+  .number-spinner {
+    width: unset;
+  }
+  button.addToCartBtn[translate='Rent Item'] {
+    border-color: deepskyblue;
+  }
+  button.addToCartBtn[translate='Sell Item'] {
+    background-color: #a02a97;
+    border-color: hotpink;
+  }
+  /* Rename "Search" button to "Change Customer" */
+  .search-icon-con {
+      visibility: hidden;
+      position: relative;
+  }
+  .search-icon-con::before {
+      visibility: visible;
+  }
+  .search-icon-con::after {
+      visibility: visible;
+      content: "Change Customer";
+      position: absolute;
+      top: 0.5em;
+      left: 5.1em;
+      line-height: 130%;
+      text-align: left;
+  }
+  /* END contract view */
+
+  /* BEGIN Dashboard view */
+
+  /* Improve formatting of tables in Dashboard view */
+  #view-home .summary-widget .field-StartTime, #view-home .summary-widget .field-DueTime, #view-home .summary-widget .field-Updated {
+    width: 60px;
+    text-align: center;
+  }
+  #view-home .summary-widget div[grid='TransactionRecentGrid'] .dgrid-column-StatusCodeSort {
+    text-align: left;
+    width: 5em;
+  }
+  /* END Dashboard view */
+
+  /* BEGIN various lists view */
+  .dgrid-cell-padding {
+    padding: 2px !important;
+  }
+  .dgrid-sort-arrow {
+    margin-left: 0px;
+  }
+  /* END various lists view */
+
+  /* BEGIN Inventory list view */
+
+  /* Replace eyeball icon with Calendar icon in Inventory list (pointofrental.com/item) */
+  .field-itemDetails .quickview .por-icon-view:before {
+    content:"\f271";
+  }
+  .dgrid-column-ItemKey {
+    width: 18em;
+  }
+  .dgrid-column-CategoryName {
+    width: 8em;
+  }
+  .dgrid-column-Tags {
+    width: 12em;
+  }
+  .dgrid-column-Availability {
+    width: 10em;
+  }
+  .dgrid-column-BaseRateOrSalePrice {
+    width: 11em;
+  }
+  /* END Inventory list view */
+
+  /* BEGIN Customers list view */
+  .dgrid-column-PrimaryPhone {
+    width: 8em;
+  }
+  .dgrid-column-OutstandingDue {
+    width: 8em;
+  }
+  .dgrid-column-TransactionsTotal {
+    width: 11em;
+  }
+  /* END Customers list view */
+
+  /* BEGIN Edit Inventory Item */
+
+  /* END Edit Inventory Item */
+
+  /* BEGIN Picklist View */
+
+  /* Hide the annoying "Location Vancouver" info.
+  To only show the Bin number is too hard in CSS; I'm doing it elsewhere in javascript */
+  .grouped-line-item-extra {
+    display: none;
+  }
+  /* END Picklist View */
+
+  /* BEGIN Invoice Preview */
+  .po-number {
+    font-size: 1.4em;
+  }
+  .po-number::first-letter {
+    font-size: .66rem;
+  }
+  .contract-terms.field-SpecialInstructionsText {
+    font-size: 1.15rem;
+    padding-top: 12px;
+  }
+  /* END Invoice Preview */
+}

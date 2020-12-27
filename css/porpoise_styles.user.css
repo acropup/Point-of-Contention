@@ -1,0 +1,173 @@
+/* ==UserStyle==
+@name           Poise Styles for Point of Rental
+@namespace      https://www.github.com/acropup/porpoise/
+@version        0.2.2
+@description    For Rental Essentials pointofrental.com, these CSS customizations are complementary to the Poise JS UserScripts.
+@preprocessor   less
+@author         Shane Burgess
+==/UserStyle== */
+
+/* Recommend using Stylus browser extension to host CSS UserStyles
+   https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne
+
+   Also, use Tampermonkey (Chrome) or Greasemonkey (Firefox) to run the PoRPoise UserScripts. */
+
+@-moz-document domain("pointofrentalcloud.com") {
+
+  .safety-cover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    opacity: .5;
+    height: 100%;
+    cursor: not-allowed;
+  }
+
+  @media screen {
+
+    /* For highlighting transient client-side modifications.
+       Note that this uses the ::after pseudo-element so it 
+       wipes out any existing ::after pseudo-element. */
+    .highlight-transient {
+      position: relative;
+      z-index: 0;
+      transform: scale(1);
+    }
+
+    .highlight-transient::after {
+      content: "";
+      position: absolute;
+      left: -4000px;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: 4000px 0px 14px 0px rgba(255, 165, 0, .5);
+      /* orange */
+      z-index: -1;
+    }
+  }
+
+  /* Show a nice icon ❀ and version number over the RE logo to indicate that this script is active */
+  .the-logo>a {
+    position: relative;
+  }
+
+  .the-logo>a::before,
+  .the-logo>a::after {
+    position: absolute;
+    color: #fffb00;
+    --sc: #ff832c;
+    --bl: 5px;
+    text-shadow: -1px -1px var(--bl) var(--sc),
+                  1px -1px var(--bl) var(--sc),
+                 -1px  1px var(--bl) var(--sc),
+                  1px  1px var(--bl) var(--sc);
+  }
+
+  .the-logo>a::before {
+    content: attr(data-por-version);
+    /* To be set by javascript with value from APP_CONFIG.version */
+    font-size: 80%;
+    left: 1.2em;
+    bottom: -1px;
+  }
+
+  .the-logo>a::after {
+    content: "❀";
+    /* Nice flower character glyph ❀, hex unicode "\2740" */
+    font-size: 175%;
+    right: 2%;
+    bottom: -2%;
+    --sc: #ff832c;
+    --bl: 5px;
+    transition: transform .8s;
+  }
+
+  .the-logo:hover>a::after {
+    transform: rotate(180deg);
+  }
+
+  /* END Show ❀ Icon */
+
+  /* START Print page formatting */
+  @media print {
+
+    /* To hide the injected Item Edit links when printing */
+    .por-noprint,
+    .por-noprint:before,
+    .por-noprint:after {
+      display: none;
+      margin: 0 !important;
+    }
+  }
+
+  /* Redefine FontAwesome, por-icon, and por-icon-edit because default CSS isn't included in Picklist printouts */
+  @font-face {
+    font-family: 'FontAwesome';
+    src: url('https://pointofrentalcloud.com/fonts/fontawesome-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .por-icon {
+    user-select: none;
+    /* Causes the icons to not be copied if user copies and pastes from the page */
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .por-icon-edit:before {
+    content: "\f040";
+    /* Edit pencil glyph from FontAwesome */
+  }
+
+  /* END Redefine */
+
+  .por-icon-inserted {
+    margin-left: 0;
+    margin-right: 0.25em;
+    font-size: 1.5em;
+  }
+
+  .picklist-default .grouped-line-items .por-icon-inserted {
+    font-size: 1em;
+  }
+
+  /* END Print page formatting */
+
+  /* Show AccessKey values when the alt key is pressed. Javascript watches 
+     for Alt key press, and adds Class 'show-accesskey' to root document node.
+     In Chrome, accesskey's are automatically Alt+Key commands. */
+  .show-accesskey *[accesskey]::after {
+    content: attr(accesskey);
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    font-weight: bold;
+    border-radius: .35em;
+    left: calc(50% - 1em);
+    top: 65%;
+    color: rgba(255, 235, 178, 1);
+    background: rgba(255, 175, 75, 1);
+    background: linear-gradient(to bottom, rgba(255, 175, 75, 1) 0%, rgba(255, 146, 10, 1) 100%);
+    box-shadow: 0px 3px 7px -2px rgba(0, 0, 0, 1),
+      inset 0px -2px 6px -1px rgba(0, 0, 0, 0.75);
+    text-shadow: 1px 1px 2px rgba(185, 100, 0, 1);
+    opacity: 0.9;
+    transition: opacity .2s ease-out;
+  }
+
+  .show-accesskey.accesskey-fade *[accesskey]::after {
+    opacity: 0;
+  }
+
+  /* END Show AccessKey */
+
+}

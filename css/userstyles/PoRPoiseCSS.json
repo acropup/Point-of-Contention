@@ -1,0 +1,18 @@
+{
+  "sections": [
+    {
+      "urls": [],
+      "urlPrefixes": [],
+      "domains": [
+        "pointofrentalcloud.com"
+      ],
+      "regexps": [],
+      "code": ".main-menu-container { background-color: green !important; }"
+    }
+  ],
+  "url": "https://www.github.com/acropup/porpoise/",
+  "updateUrl": "https://www.github.com/acropup/porpoise/CSS/UserStyles/PoRPoiseCSS.json",
+  "md5Url": "https://www.github.com/acropup/porpoise/CSS/UserStyles/PoRPoiseCSS.md5",
+  "originalMd5": "00000000000000000000000000000000",
+  "name": "Poise Enhancements for Point of Rental - Rental Essentials Style Improvements"
+}
