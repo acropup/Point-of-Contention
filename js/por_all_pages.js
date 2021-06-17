@@ -35,7 +35,8 @@
 					document.activeElement != pwField) {
 					loginButton.click();
 					return true;
-				  }
+				}
+			}
 			else { // loginButton is not visible
 				// PoR might be warning that too many users are logged in.
 				// If so, highlight the login anyway button so the user can press Enter.
