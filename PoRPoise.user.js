@@ -1,21 +1,21 @@
 // ==UserScript==
 // @name         Poise Enhancements for Point of Rental
 // @namespace    https://www.github.com/acropup/porpoise/
-// @version      0.2
+// @version      0.3
 // @description  Poise is a collection of Javascript and CSS customizations that improve usability, layout, and features of the "Rental Essentials" rental management software at PointOfRental.com
 // @homepageURL  https://www.github.com/acropup/porpoise
 // @author       Shane Burgess
 // @match        https://pointofrentalcloud.com/*
 // @grant        none
 // @noframes
-// @require      https://raw.githubusercontent.com/acropup/poise/master/js/script_execution_mgr.js
-// @require      https://raw.githubusercontent.com/acropup/poise/master/js/por_common.js
-// @require      https://raw.githubusercontent.com/acropup/poise/master/js/por_safety_cover.js
-// @require      https://raw.githubusercontent.com/acropup/poise/master/js/por_all_pages.js
-// @require      https://raw.githubusercontent.com/acropup/poise/master/js/por_p_inventory.js
-// @require      https://raw.githubusercontent.com/acropup/poise/master/js/por_p_item.js
-// @require      https://raw.githubusercontent.com/acropup/poise/master/js/por_p_contract.js
-// @require      https://raw.githubusercontent.com/acropup/poise/master/js/por_p_printouts.js
+// @require      https://raw.githubusercontent.com/acropup/porpoise/master/js/script_execution_mgr.js
+// @require      https://raw.githubusercontent.com/acropup/porpoise/master/js/por_common.js
+// @require      https://raw.githubusercontent.com/acropup/porpoise/master/js/por_safety_cover.js
+// @require      https://raw.githubusercontent.com/acropup/porpoise/master/js/por_all_pages.js
+// @require      https://raw.githubusercontent.com/acropup/porpoise/master/js/por_p_inventory.js
+// @require      https://raw.githubusercontent.com/acropup/porpoise/master/js/por_p_item.js
+// @require      https://raw.githubusercontent.com/acropup/porpoise/master/js/por_p_contract.js
+// @require      https://raw.githubusercontent.com/acropup/porpoise/master/js/por_p_printouts.js
 // ==/UserScript==
 
 // This is the root Tampermonkey script of Poise for PoR. All code is
