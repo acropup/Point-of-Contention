@@ -54,7 +54,7 @@ Here is a short feature list of the **`pointofrental_styles.user.css`** script. 
 - In Pick List view, the "Location *Warehouse location*" is often just visual clutter, so it has been removed.
 - On Invoice previews, Contract # and Notes section are enlarged to stand out.
 
-Here is a short feature list of the **Poise for Point of Rental** scripts. This includes both the CSS visual style script `porpoise.user.css` as well as the Javascript file `porpoise.user.js`.
+Here is a short feature list of the **Poise for Point of Rental** scripts. This includes both the CSS visual style script `porpoise_styles.user.css` as well as the Javascript file `porpoise.user.js`.
 
 - Auto-login - If a password manager autofills your username and password, Poise will automatically click the Login button for you.
 - Logout Recovery - Point of Rental automatically logs you out after an hour or so. Poise will return you to your last page the next time the tab is activated.
