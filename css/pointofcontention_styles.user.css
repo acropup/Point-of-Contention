@@ -1,8 +1,8 @@
 /* ==UserStyle==
-@name           Poise Styles for Point of Rental
-@namespace      https://www.github.com/acropup/porpoise/
-@version        0.2.2
-@description    For Rental Essentials pointofrental.com, these CSS customizations are complementary to the Poise JS UserScripts.
+@name           Point of Contention Styles for Point of Rental
+@namespace      https://www.github.com/acropup/point-of-contention/
+@version        0.2.3
+@description    For Rental Essentials pointofrental.com, these CSS customizations are complementary to the Point of Contention JS UserScripts.
 @preprocessor   less
 @author         Shane Burgess
 ==/UserStyle== */
@@ -10,7 +10,7 @@
 /* Recommend using Stylus browser extension to host CSS UserStyles
    https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne
 
-   Also, use Tampermonkey (Chrome) or Greasemonkey (Firefox) to run the PoRPoise UserScripts. */
+   Also, use Tampermonkey (Chrome) or Greasemonkey (Firefox) to run the Point of Contention UserScripts. */
 
 @-moz-document domain("pointofrentalcloud.com") {
 

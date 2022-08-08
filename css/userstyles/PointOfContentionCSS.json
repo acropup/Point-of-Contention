@@ -1,0 +1,18 @@
+{
+  "sections": [
+    {
+      "urls": [],
+      "urlPrefixes": [],
+      "domains": [
+        "pointofrentalcloud.com"
+      ],
+      "regexps": [],
+      "code": ".main-menu-container { background-color: green !important; }"
+    }
+  ],
+  "url": "https://www.github.com/acropup/point-of-contention/",
+  "updateUrl": "https://www.github.com/acropup/point-of-contention/CSS/UserStyles/PointOfContentionCSS.json",
+  "md5Url": "https://www.github.com/acropup/point-of-contention/CSS/UserStyles/PointOfContentionCSS.md5",
+  "originalMd5": "00000000000000000000000000000000",
+  "name": "Point of Contention - Point of Rental Style Improvements"
+}

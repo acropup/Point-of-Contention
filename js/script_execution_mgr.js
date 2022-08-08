@@ -1,5 +1,5 @@
 'use strict';
-// window.porMod is where Poise saves any shared global context
+// window.porMod is where Point of Contention saves any shared global context
 window.porMod = {};
 porMod.runAlways = [];
 porMod.runOnPage = [];
